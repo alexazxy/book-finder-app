@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Book Finder — Găsește cărți</title>
+</head>
+<body>
+    <header>
+        <h1>Book Finder</h1>
+        <p>Introduceți un titlu, autor sau subiect pentru a căuta cărți relevante.</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="search-label">
+            <form id="searchForm" onsubmit="return false;">
+                <label id="search-label" for="searchInput">Cuvânt cheie</label>
+                <input
+                    type="search"
+                    id="searchInput"
+                    name="q"
+                    placeholder="Ex: Dostoievski, istorie, programare"
+                    aria-describedby="search-help"
+                    required
+                />
+                <button type="submit" id="searchButton">Caută</button>
+                <p id="search-help">Apăsați butonul pentru a iniția căutarea.</p>
+            </form>
+        </section>
+
+        <section id="resultsSection" aria-labelledby="results-title" aria-live="polite">
+            <h2 id="results-title">Rezultate căutare</h2>
+            <div id="results" class="results-list">
+                <!-- Rezultatele vor fi afișate aici -->
+            </div>
+            <div id="noResults" hidden>Niciun rezultat pentru căutarea curentă.</div>
+        </section>
+    </main>
+
+    <footer>
+        <small>Book Finder — Interfață structurală</small>
+    </footer>
+</body>
+</html>
